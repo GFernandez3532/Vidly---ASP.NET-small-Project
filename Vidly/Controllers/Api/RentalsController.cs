@@ -3,16 +3,28 @@ using System.Linq;
 using System.Web.Http;
 using Vidly.Dtos;
 using Vidly.Models;
+using System.Data.Entity;
+using AutoMapper;
 
 namespace Vidly.Controllers.Api
 {
-    public class NewRentalsController : ApiController
+    public class RentalsController : ApiController
     {
         private ApplicationDbContext _context;
 
-        public NewRentalsController()
+        public RentalsController()
         {
             _context = new ApplicationDbContext();
+        }
+
+        public IHttpActionResult GetRentals()
+        {
+            var rentals = _context.Rentals
+                .Include(r => r.Customer)
+                .Include(r => r.Movie);
+
+
+            return Ok(rentals);
         }
 
         [HttpPost]

@@ -200,7 +200,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Api\NewRentalsController.cs" />
+    <Compile Include="Controllers\Api\RentalsController.cs" />
     <Compile Include="Controllers\Api\CustomersController.cs" />
     <Compile Include="Controllers\Api\MoviesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
@@ -303,6 +303,10 @@
     <Compile Include="Migrations\201907111056046_ModifyMoviesToIncludeAvailability.cs" />
     <Compile Include="Migrations\201907111056046_ModifyMoviesToIncludeAvailability.Designer.cs">
       <DependentUpon>201907111056046_ModifyMoviesToIncludeAvailability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907120546396_AvailabilityToMovies.cs" />
+    <Compile Include="Migrations\201907120546396_AvailabilityToMovies.Designer.cs">
+      <DependentUpon>201907120546396_AvailabilityToMovies.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -584,6 +588,7 @@
     <Content Include="Views\Movies\MovieForm.cshtml" />
     <Content Include="Views\Movies\ReadOnlyList.cshtml" />
     <Content Include="Views\Rentals\New.cshtml" />
+    <Content Include="Views\Rentals\List.cshtml" />
     <None Include="Web.Testing.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -670,6 +675,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907111056046_ModifyMoviesToIncludeAvailability.resx">
       <DependentUpon>201907111056046_ModifyMoviesToIncludeAvailability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907120546396_AvailabilityToMovies.resx">
+      <DependentUpon>201907120546396_AvailabilityToMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
